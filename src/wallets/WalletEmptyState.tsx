@@ -37,7 +37,7 @@ export function WalletEmptyState() {
           >
             Connect your wallet to start
           </span>
-          <WalletSelector blockchain={blockchain} />
+          <WalletSelector />
         </div>
       </div>
     );

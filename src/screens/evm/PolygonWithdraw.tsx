@@ -3,8 +3,6 @@ import { useTheme } from "../../hooks/useTheme.tsx";
 import { useEthWallet } from "../../wallets/EthWallet.tsx";
 import { Blockchain, COINFLOW_ENV, MERCHANT_ID } from "../../types.ts";
 import { useHeightHandler } from "../../hooks/useHeightHandler.tsx";
-import { WagmiConfig } from "../../App.tsx";
-import { createWeb3Modal } from "@web3modal/wagmi";
 
 export function PolygonWithdraw() {
   const {

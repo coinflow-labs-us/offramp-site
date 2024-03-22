@@ -11,7 +11,7 @@ export const useBlockchainStore = create<BlockchainState>()(
   devtools(
     persist(
       (set) => ({
-        blockChain: Blockchain.Solana,
+        blockchain: null,
         setBlockchain: (b: Blockchain) =>
           set(() => ({
             blockchain: b,

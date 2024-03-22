@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import { Blockchain } from "../types.ts";
 import { useSwitchChain } from "wagmi";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useEthWallet } from "./EthWallet.tsx";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useBlockchainStore } from "../stores/BlockchainStore.tsx";
-import { createWeb3Modal } from "@web3modal/wagmi";
-import { WagmiConfig, WagmiProjectId } from "../App.tsx";
 
 export function WalletSelector() {
   const { blockchain } = useBlockchainStore();
@@ -37,5 +33,7 @@ export function WalletSelector() {
 }
 
 function Web3Button() {
-  return <w3m-button label={null} balance={0} />;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  return <w3m-button balance={"hide"} />;
 }
